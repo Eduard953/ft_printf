@@ -6,7 +6,7 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:45:56 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/08 15:53:14 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/09/13 16:47:34 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_print_perc(void)
 int	ft_print_s(char *a)
 {
 	write(1, a, ft_strlen(a));
-	write(1, '\0', 1);
 	return (0);
 }
 
