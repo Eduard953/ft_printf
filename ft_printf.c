@@ -6,7 +6,7 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 17:01:46 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/13 12:32:31 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/09/13 17:47:25 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,14 @@ int	get_flag(const char *fmt, va_list args, int p_flag)
 	return (p_flag);
 }
 
-void	ft_printf(const char *fmt, ...)
+int	ft_printf(const char *fmt, ...)
 {
 	int		p_flag;
+	int		ret;
 	va_list	args;
 
 	va_start(args, fmt);
+	ret = 0;
 	p_flag = 0;
 	while (*fmt != '\0')
 	{
@@ -48,6 +50,8 @@ void	ft_printf(const char *fmt, ...)
 			write(1, fmt, 1);
 		p_flag = get_flag(fmt, args, p_flag);
 		++fmt;
+		++ret;
 	}
 	va_end(args);
+	return (ret);
 }
