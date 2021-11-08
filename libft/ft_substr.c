@@ -30,7 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		rtn[i] = *(s + start + i);
 		i++;
 	}
-	free(s);
 	rtn[i] = '\0';
 	return (rtn);
 }
