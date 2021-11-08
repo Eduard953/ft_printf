@@ -6,7 +6,7 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 11:46:07 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/06/19 13:53:19 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/10/15 12:20:11 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		rtn[i] = *(s + start + i);
 		i++;
 	}
+	free(s);
 	rtn[i] = '\0';
 	return (rtn);
 }

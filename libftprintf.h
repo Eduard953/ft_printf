@@ -6,7 +6,7 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:37:58 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/13 17:58:25 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/09/14 16:50:04 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <stdarg.h>
 # include <stdlib.h>
 
-int		get_flag(const char *fmt, va_list args, int p_flag);
+int		get_ret(const char *fmt, va_list args);
 int		ft_printf(const char *fmt, ...);
-int		rec_hex(unsigned long long a);
-int		rec_hex_up(unsigned long long a);
+void	rec_hex(unsigned long long a, int *count);
+void	rec_hex_up(unsigned long long a, int *count);
 int		ft_print_p(unsigned long long ptr);
 int		ft_print_x(unsigned long long n);
 int		ft_print_xup(unsigned long long n);

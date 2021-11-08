@@ -6,13 +6,13 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 18:37:25 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/08 14:48:27 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/05/22 18:55:46 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isdigit (int c)
 {
 	return (c >= '0' && c <= '9');
 }

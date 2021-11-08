@@ -6,15 +6,15 @@
 /*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 13:21:10 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/08 14:49:41 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/06/19 14:24:59 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	if (!s)
@@ -23,3 +23,4 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
