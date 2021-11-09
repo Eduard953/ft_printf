@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_num_arr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:45:56 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/15 13:33:27 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/11/08 21:39:58 by jguscins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_di(int a)
 {

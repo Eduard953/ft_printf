@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 17:01:46 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/15 14:19:44 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/11/09 15:57:44 by jguscins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	get_ret(const char *fmt, va_list args)
 {
@@ -24,7 +24,7 @@ int	get_ret(const char *fmt, va_list args)
 	else if (*fmt == 's')
 		ret = ft_print_s(va_arg(args, char *));
 	else if (*fmt == 'p')
-		ret = ft_print_p(args, va_arg(args, unsigned long long));
+		ret = ft_print_p(va_arg(args, unsigned long long));
 	else if (*fmt == 'u')
 		ret = ft_print_u(va_arg(args, unsigned int));
 	else if (*fmt == 'x')
@@ -53,7 +53,7 @@ int	ft_printf(const char *fmt, ...)
 			if (*fmt == '\0')
 				break ;
 			ret += get_ret(fmt, args);
-			va_arg(args, int); // poprobuj zapustit bez etoi stroki
+			//va_arg(args, int); // poprobuj zapustit bez etoi stroki
 		}
 		else
 		{
