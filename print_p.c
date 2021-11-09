@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex.c                                        :+:      :+:    :+:   */
+/*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eduardbeiline <eduardbeiline@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 14:37:12 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/11/09 14:29:49 by eduardbeili      ###   ########.fr       */
+/*   Created: 2021/11/09 14:22:13 by eduardbeili       #+#    #+#             */
+/*   Updated: 2021/11/09 14:32:59 by eduardbeili      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	rec_hex(unsigned int a, int *count)
+void	rec_p(unsigned long long a, int *count)
 {
 	int	remainder;
 	int	w_int;
@@ -33,41 +33,23 @@ void	rec_hex(unsigned int a, int *count)
 	}
 }
 
-void	rec_hex_up(unsigned int a, int *count)
+int	ft_print_p(va_list test, unsigned long long ptr)
 {
-	int	remainder;
-	int	w_int;
+	int		count;
+	void	*p;
+	va_list	ptr1;
 
-	(*count)++;
-	remainder = a % 16;
-	if (a / 16)
-		rec_hex_up((a / 16), count);
-	if (remainder < 10)
+	va_copy(ptr1, test);
+	p = va_arg(test, void *);
+	if (((void *)-1) == p)
 	{
-		w_int = 48 + remainder;
-		write(1, &w_int, 1);
+		va_end(ptr1);
+		write(1, "0xffffffffffffffff", 18);
+		return (18);
 	}
-	else
-	{
-		w_int = 55 + remainder;
-		write(1, &w_int, 1);
-	}
-}
-
-int	ft_print_x(unsigned int n)
-{
-	int	count;
-
 	count = 0;
-	rec_hex(n, &count);
-	return (count);
-}
-
-int	ft_print_xup(unsigned int n)
-{
-	int	count;
-
-	count = 0;
-	rec_hex_up(n, &count);
-	return (count);
+	write(1, "0", 1);
+	write(1, "x", 1);
+	rec_p(ptr, &count);
+	return (count + 2);
 }

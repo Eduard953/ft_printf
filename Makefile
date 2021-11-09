@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: eduardbeiline <eduardbeiline@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/08 15:14:30 by ebeiline          #+#    #+#              #
-#    Updated: 2021/09/13 18:11:31 by ebeiline         ###   ########.fr        #
+#    Updated: 2021/11/09 14:30:33 by eduardbeili      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = ft_printf.c print_hex.c print_num_arr.c
+SRCS = ft_printf.c print_hex.c print_num_arr.c print_p.c
 
 FLAGS = -Wall -Wextra -Werror
 

@@ -20,11 +20,12 @@
 
 int		get_ret(const char *fmt, va_list args);
 int		ft_printf(const char *fmt, ...);
-void	rec_hex(unsigned long long a, int *count);
-void	rec_hex_up(unsigned long long a, int *count);
-int		ft_print_p(unsigned long long ptr);
-int		ft_print_x(unsigned long long n);
-int		ft_print_xup(unsigned long long n);
+void	rec_hex(unsigned int a, int *count);
+void	rec_hex_up(unsigned int a, int *count);
+int		ft_print_p(va_list ptr1, unsigned long long ptr);
+void	rec_p(unsigned long long a, int *count);
+int		ft_print_x(unsigned int n);
+int		ft_print_xup(unsigned int n);
 int		ft_print_di(int a);
 int		ft_print_c(int a);
 int		ft_print_perc(void);

@@ -24,13 +24,13 @@ int	get_ret(const char *fmt, va_list args)
 	else if (*fmt == 's')
 		ret = ft_print_s(va_arg(args, char *));
 	else if (*fmt == 'p')
-		ret = ft_print_p(va_arg(args, unsigned long long));
+		ret = ft_print_p(args, va_arg(args, unsigned long long));
 	else if (*fmt == 'u')
 		ret = ft_print_u(va_arg(args, unsigned int));
 	else if (*fmt == 'x')
-		ret = ft_print_x(va_arg(args, unsigned long long));
+		ret = ft_print_x(va_arg(args, unsigned int));
 	else if (*fmt == 'X')
-		ret = ft_print_xup(va_arg(args, unsigned long long));
+		ret = ft_print_xup(va_arg(args, unsigned int));
 	else if (*fmt == '%')
 		ret = ft_print_perc();
 	else
@@ -41,7 +41,6 @@ int	get_ret(const char *fmt, va_list args)
 int	ft_printf(const char *fmt, ...)
 {
 	int		ret;
-	int		i;
 	va_list	args;
 
 	va_start(args, fmt);
@@ -54,7 +53,7 @@ int	ft_printf(const char *fmt, ...)
 			if (*fmt == '\0')
 				break ;
 			ret += get_ret(fmt, args);
-			i = va_arg(args, int);
+			va_arg(args, int); // poprobuj zapustit bez etoi stroki
 		}
 		else
 		{
@@ -63,7 +62,6 @@ int	ft_printf(const char *fmt, ...)
 		}
 		++fmt;
 	}
-	if (i || !i)
-		va_end(args);
+	va_end(args);
 	return (ret);
 }
