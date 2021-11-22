@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduardbe <eduardbe@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 14:22:13 by eduardbe          #+#    #+#             */
-/*   Updated: 2021/11/09 15:57:41 by jguscins         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:55:35 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 void	rec_p(unsigned long long a, int *count)
 {

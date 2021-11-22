@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebeiline <ebeiline@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:37:12 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/11/09 15:18:28 by jguscins         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:55:31 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 void	rec_hex(unsigned int a, int *count)
 {

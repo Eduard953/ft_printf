@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebeiline <ebeiline@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 17:01:46 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/11/09 15:57:44 by jguscins         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:55:40 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	get_ret(const char *fmt, va_list args)
 {
@@ -53,7 +53,6 @@ int	ft_printf(const char *fmt, ...)
 			if (*fmt == '\0')
 				break ;
 			ret += get_ret(fmt, args);
-			//va_arg(args, int); // poprobuj zapustit bez etoi stroki
 		}
 		else
 		{
