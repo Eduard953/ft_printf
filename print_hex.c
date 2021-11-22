@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduardbeiline <eduardbeiline@student.42    +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:37:12 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/11/09 14:29:49 by eduardbeili      ###   ########.fr       */
+/*   Updated: 2021/11/22 16:55:31 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eduardbeiline <eduardbeiline@student.42    +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 14:22:13 by eduardbeili       #+#    #+#             */
-/*   Updated: 2021/11/09 14:32:59 by eduardbeili      ###   ########.fr       */
+/*   Created: 2021/11/09 14:22:13 by eduardbe          #+#    #+#             */
+/*   Updated: 2021/11/22 16:55:35 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	rec_p(unsigned long long a, int *count)
 	(*count)++;
 	remainder = a % 16;
 	if (a / 16 != 0)
-		rec_hex((a / 16), count);
+		rec_p((a / 16), count);
 	if (remainder < 10)
 	{
 		w_int = 48 + remainder;
@@ -33,20 +33,10 @@ void	rec_p(unsigned long long a, int *count)
 	}
 }
 
-int	ft_print_p(va_list test, unsigned long long ptr)
+int	ft_print_p(unsigned long long ptr)
 {
 	int		count;
-	void	*p;
-	va_list	ptr1;
 
-	va_copy(ptr1, test);
-	p = va_arg(test, void *);
-	if (((void *)-1) == p)
-	{
-		va_end(ptr1);
-		write(1, "0xffffffffffffffff", 18);
-		return (18);
-	}
 	count = 0;
 	write(1, "0", 1);
 	write(1, "x", 1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_num_arr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebeiline <ebeiline@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: ebeiline <ebeiline@42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:45:56 by ebeiline          #+#    #+#             */
-/*   Updated: 2021/09/15 13:33:27 by ebeiline         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:55:23 by ebeiline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
